@@ -372,6 +372,15 @@ jobs:
         ## DUMP1090
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
 
+        ## KVR支持
+        echo "CONFIG_FIRMWARE_INCLUDE_80211R=y" >> .config
+        
+        ## KVR支持
+        echo "CONFIG_FIRMWARE_INCLUDE_80211K=y" >> .config
+       
+        ## KVR支持
+        echo "CONFIG_FIRMWARE_INCLUDE_80211V=y" >> .config
+
         ## RTL_SDR
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
 
@@ -447,7 +456,7 @@ jobs:
         tag_name: ${{ env.tag }}
         body: |
           > ### 编译时间：${{ env.build_time }}
-          ZTE_E8820S 32M 固件，包含 Lucky, SmartDNS 等。
+          ZTE_E8820S 32M 固件，支持kvr，包含 Lucky, SmartDNS 等。
         files: |
           /opt/images/*.trx
           /opt/images/*.config
