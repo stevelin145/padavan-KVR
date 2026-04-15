@@ -442,3 +442,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
+        name: Padavan-Firmware-ZTE-E8820S
+        path: /opt/images/
